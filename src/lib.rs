@@ -43,11 +43,14 @@ impl Hasher for Mixer {
             self.write_u64(i);
         }
 
-        let mut i = 0;
-        for &byte in chunks.remainder() {
-            i = (i << 8) | byte as u64;
+        let rem = chunks.remainder();
+        if !rem.is_empty() {
+            let mut i = 0;
+            for &byte in rem {
+                i = (i << 8) | byte as u64;
+            }
+            self.write_u64(i);
         }
-        self.write_u64(i);
     }
 
     #[inline]
