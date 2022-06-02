@@ -1,0 +1,10 @@
+[package]
+name = "mixhash"
+version = "0.1.0"
+authors = ["Scallop Ye <yescallop@gmail.com>"]
+edition = "2021"
+description = "A non-cryptographic hash function that mixes the data only."
+repository = "https://github.com/yescallop/mixhash"
+license = "MIT"
+keywords = ["hash", "hasher"]
+categories = ["algorithms", "no-std"]
