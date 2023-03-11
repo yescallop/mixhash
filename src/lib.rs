@@ -18,7 +18,7 @@
 use core::hash::{BuildHasher, Hasher};
 
 /// Builds a [`Mixer`].
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Default)]
 pub struct Mix;
 
 impl BuildHasher for Mix {
